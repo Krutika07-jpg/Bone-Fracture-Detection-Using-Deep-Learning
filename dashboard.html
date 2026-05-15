@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bone Fracture Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-brand">BoneFracture AI</div>
+            <div class="nav-menu">
+                <a href="/">Home</a>
+                <a href="/dashboard.html" class="active">Dashboard</a>
+                <a href="/upload.html">Upload X-Ray</a>
+                <a href="/reports.html">Reports</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+
+        <div class="dashboard">
+            <h1>Welcome, <span id="userName"></span>!</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total X-Rays</h3>
+                    <p id="totalXrays">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Fractures Detected</h3>
+                    <p id="totalFractures">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Reports Generated</h3>
+                    <p id="totalReports">0</p>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h2>Recent Activity</h2>
+                <table id="activityTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activityBody">
+                        <tr>
+                            <td colspan="3">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

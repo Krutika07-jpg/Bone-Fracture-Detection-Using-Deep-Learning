@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Bone Fracture Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-brand">BoneFracture AI</div>
+            <div class="nav-menu">
+                <a href="/">Home</a>
+                <a href="/dashboard.html">Dashboard</a>
+                <a href="/upload.html">Upload X-Ray</a>
+                <a href="/reports.html" class="active">Reports</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+
+        <div class="reports-container">
+            <h1>Your Reports</h1>
+            
+            <div class="reports-grid" id="reportsGrid">
+                <p>Loading reports...</p>
+            </div>
+
+            <div id="reportModal" class="modal">
+                <div class="modal-content report-modal">
+                    <span class="close">&times;</span>
+                    <h2>Detailed Report</h2>
+                    <div id="reportDetails">
+                        <!-- Report details will be inserted here -->
+                    </div>
+                    <button onclick="downloadReport()" class="btn-primary">Download Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
